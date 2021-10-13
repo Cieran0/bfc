@@ -20,7 +20,7 @@ int main(int argc, char** argv)
 	std::ifstream file(filePath, std::ifstream::binary);
 	if (!file.good()) 
 	{
-		std::cout << "File " << argv[filePos] << " does not exist";
+		std::cout << "File " << argv[filePos] << " does not exist\n";
 		std::exit(0);
 	}
 

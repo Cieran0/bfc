@@ -33,7 +33,7 @@ int main(int argc, char** argv)
 
 	Compile(Condense(Tokenise(input)),(outputPath + ".asm").c_str());
 
-	std::string nasmCommand = "nasm -f elf64 " + filePath;
+	std::string nasmCommand = "nasm -f elf64 " + outputPath + ".asm";
 	std::string ldCommand = "ld -o " + outputPath + " " + outputPath + ".o";
 
 	system(nasmCommand.c_str());

@@ -38,9 +38,11 @@ int main(int argc, char** argv)
 
 	system(nasmCommand.c_str());
 	system(ldCommand.c_str());
-
-	remove((outputPath + ".o").c_str());
-	remove((outputPath + ".asm").c_str());
+	
+	if (!keepFiles) {
+		remove((outputPath + ".o").c_str());
+		remove((outputPath + ".asm").c_str());
+	}
 	return 0;
 }
 

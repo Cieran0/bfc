@@ -12,7 +12,7 @@ int main(int argc, char** argv)
 	bool keepFiles = false;
 	int filePos = 1;
 
-	if (argc > 2) if (argv[1] == "-k") { keepFiles = true; filePos++;}
+	if (argc > 2) if (std::string(argv[1]) == "-k") { keepFiles = true; filePos++;}
 
 	std::string filePath = argv[filePos];
 	std::string outputPath = filePath.substr(0, filePath.find_last_of('.'));
